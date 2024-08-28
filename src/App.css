@@ -1,0 +1,33 @@
+.cardContainer {
+  width: 100vw;
+  padding: 10px 30px;
+
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.card {
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--grey-color);
+  box-shadow: var(--boxshadow);
+
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+img {
+  max-width: 100%;
+}
