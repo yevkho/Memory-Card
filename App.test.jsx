@@ -41,7 +41,7 @@ describe("App Component 2", () => {
     render(<AppTest2 />);
 
     const button = screen.getByRole("button", { name: "Click Me Again" });
-    await user.click(button);
+    await user.click(button); // don't seem to work otherwise
 
     expect(screen.getByRole("heading").textContent).toMatch(/radical rhinos/i);
   });

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes, { func, number } from "prop-types";
 import "./App.css";
 
 export default function App() {
@@ -31,6 +32,18 @@ export default function App() {
     </>
   );
 }
+
+// development stage type checking - START
+GameDisplay.propTypes = {
+  handleGameToggle: PropTypes.func,
+  bestScore: PropTypes.number,
+  setBestScore: PropTypes.func,
+};
+
+GameDisplay.defaultProps = {
+  handleGameToggle: () => console.log("Hello"),
+};
+// development stage type checking - END
 
 function GameDisplay({ handleGameToggle, bestScore, setBestScore }) {
   const [currentScore, setCurrentScore] = useState(0);

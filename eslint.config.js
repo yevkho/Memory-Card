@@ -33,7 +33,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      "react/prop-types": "off", // temporary measure see TOP
+      // "react/prop-types": "off", // temporary measure see TOP
     },
   },
 ];
